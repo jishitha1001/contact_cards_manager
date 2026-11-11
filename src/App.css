@@ -1,0 +1,532 @@
+
+/* =====================================
+   APP LAYOUT
+===================================== */
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 35px;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.app-header {
+  min-height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #674740;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #FFF3E9;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  background: #E99A79;
+  color: #47302C;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-label {
+  color: #D6A18D;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 75px 0;
+  gap: 30px;
+}
+
+.section-tag {
+  color: #E99A79;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  color: #FFF3E9;
+  font-size: clamp(40px, 6vw, 65px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.hero-content h1 span {
+  color: #E99A79;
+}
+
+.hero-content p {
+  color: #D8BDB1;
+  max-width: 480px;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.hero-decoration {
+  text-align: center;
+  color: #D6A18D;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.decoration-circle {
+  width: 190px;
+  height: 190px;
+  border: 1px solid #E99A79;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  color: #E99A79;
+  font-size: 75px;
+  background: #553832;
+  box-shadow: 0 0 50px rgba(233, 154, 121, 0.12);
+}
+
+
+/* =====================================
+   CONTACT FORM
+===================================== */
+
+.form-container {
+  background: #FFF3E9;
+  border-radius: 18px;
+  padding: 35px;
+  margin-bottom: 65px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.form-heading {
+  margin-bottom: 25px;
+}
+
+.form-heading h2 {
+  color: #47302C;
+  font-size: 27px;
+  margin: 10px 0 5px;
+}
+
+.form-heading p {
+  color: #94766A;
+  font-size: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #47302C;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #E4CFC3;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #47302C;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #D97757;
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #B59C90;
+}
+
+.bio-group {
+  margin-top: 20px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-button {
+  margin-top: 22px;
+  padding: 14px 28px;
+  background: #D97757;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.add-button:hover {
+  background: #B85D43;
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   SEARCH BAR
+===================================== */
+
+.contacts-section {
+  margin-bottom: 70px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #553832;
+  border: 1px solid #79574D;
+  padding: 5px 16px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+.search-icon {
+  color: #E99A79;
+  font-size: 25px;
+}
+
+.search-input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #FFF3E9;
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+.search-input::placeholder {
+  color: #D6A18D;
+}
+
+.search-input:focus {
+  box-shadow: none;
+}
+
+.clear-search {
+  border: none;
+  background: transparent;
+  color: #E99A79;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+/* =====================================
+   CONTACT LIST HEADING
+===================================== */
+
+.list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.list-heading h2 {
+  color: #FFF3E9;
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+.contact-count {
+  color: #47302C;
+  background: #E99A79;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =====================================
+   CONTACT GRID
+===================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+
+/* =====================================
+   CONTACT CARD
+===================================== */
+
+.contact-card {
+  background: #FFF3E9;
+  border: 1px solid #E4CFC3;
+  padding: 25px;
+  border-radius: 14px;
+  transition: 0.25s;
+  min-width: 0;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: #E99A79;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #E99A79;
+  color: #47302C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-heading h3 {
+  color: #47302C;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.job-title {
+  color: #B56C54;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.card-divider {
+  height: 1px;
+  background: #E8D7CE;
+  margin: 20px 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.contact-info p {
+  color: #59443C;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.contact-info a {
+  color: #B85D43;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.info-label {
+  display: block;
+  color: #A78B80;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.contact-bio {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #E8D7CE;
+  color: #806A60;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.empty-state {
+  text-align: center;
+  padding: 55px 20px;
+  background: #553832;
+  border: 1px dashed #A77B6B;
+  border-radius: 14px;
+}
+
+.empty-icon {
+  color: #E99A79;
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.empty-state h3 {
+  color: #FFF3E9;
+  font-size: 20px;
+}
+
+.empty-state p {
+  color: #D6A18D;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.app-footer {
+  border-top: 1px solid #674740;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.footer-brand {
+  color: #E99A79;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.app-footer p {
+  color: #D6A18D;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.app-footer .copyright {
+  color: #A98B80;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+  .app {
+    padding: 0 20px;
+  }
+
+  .hero-section {
+    padding: 55px 0;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .app-header {
+    min-height: 70px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .header-label {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero-content h1 {
+    font-size: 43px;
+  }
+
+  .form-container {
+    padding: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .list-heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .list-heading h2 {
+    font-size: 24px;
+  }
+
+}
